@@ -1,18 +1,329 @@
-<html>
+<!doctype html>
+<html lang="us">
 <head>
-	<title>Ragamuffin&#39;s Baking Co.</title>
+	<meta charset="utf-8" />
+	<title>RAGAMUFFIN&#39;S BAKING COMPANY | MAKING SOUTHERN MAINE A SWEETER PLACE</title>
+	<link href="colorbox/colorbox.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="colorbox/example1/colorbox.css" rel="stylesheet" />
+	<link href="css/Raggamuffin-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+	<link href="colorbox/colorbox.css" media="screen" rel="stylesheet" type="text/css" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script src="js/jquery-1.9.1.js"></script><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script><script src="js/jquery-ui-1.9.2.custom.js"></script><script src="colorbox/jquery.colorbox-min.js"></script><script src="cycle/jquery.cycle.all.min.js"></script><script src="jflickrfeed.min.js"></script><script src="setup.js"></script><script src="js/jquery-ui-1.10.3.custom.js"></script><script>
+	$(function() {
+		
+		$( "#accordion" ).accordion();
+		
+
+		
+		var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+		];
+		$( "#autocomplete" ).autocomplete({
+			source: availableTags
+		});
+		
+
+		
+		$( "#button" ).button();
+		$( "#radioset" ).buttonset();
+		
+
+		
+		$( "#tabs" ).tabs();
+		
+
+		
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			width: 400,
+			buttons: [
+				{
+					text: "Ok",
+					click: function() {
+						$( this ).dialog( "close" );
+					}
+				},
+				{
+					text: "Cancel",
+					click: function() {
+						$( this ).dialog( "close" );
+					}
+				}
+			]
+		});
+
+		// Link to open the dialog
+		$( "#dialog-link" ).click(function( event ) {
+			$( "#dialog" ).dialog( "open" );
+			event.preventDefault();
+		});
+		
+
+		
+		$( "#datepicker" ).datepicker({
+			inline: true
+		});
+		
+
+		
+		$( "#slider" ).slider({
+			range: true,
+			values: [ 17, 67 ]
+		});
+		
+
+		
+		$( "#progressbar" ).progressbar({
+			value: 20
+		});
+		
+
+		// Hover states on the static widgets
+		$( "#dialog-link, #icons li" ).hover(
+			function() {
+				$( this ).addClass( "ui-state-hover" );
+			},
+			function() {
+				$( this ).removeClass( "ui-state-hover" );
+			}
+		);
+	});
+	</script>
+	<style type="text/css">body{
+		font: 62.5% "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+	<style type="text/css">#container { width: 690px; padding: 8px; margin: 0 auto; text-align: left; }
+
+
+
+.thumbs { margin: 0; padding: 0; overflow: hidden; }
+.thumbs li { list-style: none; float: left; margin: 5px; padding: 0px; background: #231c1b; -moz-box-shadow: 0 0 4px #444; -webkit-box-shadow: 0 0 2px #000;}
+.thumbs li a { }
+.thumbs li img { display: block;}
+.thumbs li a img { border: none;}
+
+#cycle { margin: 0; padding: 0; width: 520px; height: 390px; padding: 3px; background: #eee; -moz-box-shadow: 0 0 2px #231c1b; -webkit-box-shadow: 0 0 2px #231c1b;}
+#cycle li { position: relative; list-style: none; margin: 0; padding: 3px; width: 520px; height: 390px; overflow: hidden; }
+#cycle li div { position: absolute; bottom: 3px; left: 3px; padding: 3px; width: 494px; background: #231c1b; color: white; font-size: 12px; opacity: .8; }
+	</style>
 </head>
-<body>
-<div style="background-color:#F8BBCD;">
-<p style="text-align: center;"><img height="400" src="logo1.jpg" style="float: center;" width="400" /></p>
+<body background="images/bgpattern2.png" bgcolor="#1da1b8">
+<div style="margin: 0px auto 0px auto;background-image:url(images/lacetop.png); width:960px; height: 30px;">r</div>
 
-<h1 style="text-align: center;font-size:20;font-family:Comic Sans MS;">Thank you for your patience while we build up our site!</h1>
+<div style="margin: 0px auto 0px auto; background-color: #f8bbcd; width:960px; height: 630px;">
+<div style="position:absolute; background-color: #f8bbcd; height: 628px; width: 238px;">
+<div>
+<p align="center"><img border="0" height="161" src="images/Updated Logo.jpg" width="161" /></p>
+</div>
+<!-- Accordion -->
 
-<h2 style="text-align: center;font-size:18;font-family:Comic Sans MS;">In the meantime, check out our links below for what we&#39;re working on and upcoming events:</h2>
+<div id="accordion" style="position:absolute; width:230px; height: 460px; left: 4px;">
+<h3>ABOUT</h3>
 
-<h2 style="text-align: center;font-size:16;font-family:Georgia;"><a href="https://www.facebook.com/RagamuffinsCheesecakeCo">Ragamuffin&#39;s on Facebook</a></h2>
+<div>
+<div style="height: 300px; overflow-y: scroll;">
+<p><span style="font-size:9px">Hi there! I was born and raised in Portland, where I grew up in a family with great cooks and food lovers.<br />
+<br />
+In 2006, I graduated with a Culinary Arts degree from SMCC and pursued a career in a local, Portland bakery. It was there I gained invaluable industry experience as well as made the best friends I could hope for. &nbsp;I left the bakery for the corporate world, but I never stopped loving to bake-- seizing every birthday, potluck, and get together I could find. So eventually, over a bowl of Vietnamese noodles, I decided start up my own bakery.<br />
+<br />
+My goal is to contribute something positive to people, and to me, nothing is more universally loved than food. I love making cheesecakes and desserts, and the unlimited versatility that they allow. I love taking classic flavors and combinations and turning them into over the top creations. My baked goods are made from scratch, including homemade caramel, icings, and shortbread for crusts.&nbsp;<br />
+<br />
+I hope you enjoy the goods, please know, I&#39;ve enjoyed making them even more.</span></p>
+</div>
+</div>
 
-<h2 style="text-align: center;font-size:16;font-family:Georgia;"><a href="http://ragamuffinsbakingco.blogspot.com">Ragamuffin&#39;s Blog</a></h2>
+<h3>CURRENT MENU</h3>
+
+<div>To download a PDF of our most up-to-date menu please click<button>HERE.</button></div>
+
+<h3>CONTACT</h3>
+
+<div>Phone: 207-749-5342&nbsp;</div>
+
+<div>Email: ragamuffinsbakingco@gmai</div>
+
+<div><br />
+<button>Email</button></div>
+</div>
+
+<div style="position:absolute; left: 62px; top: 600px; width:128px; height: 24px;"><a href="https://twitter.com/ragamuffinsbake" target="_blank"><img border="0" height="22" src="images/TWITLOGO.png" width="22" /></a> <a href="mailto:ragamuffinsbakingco@gmail.com"><img border="0" height="22" src="images/MAILLOGO.png" width="22" /></a> <a href="https://www.facebook.com/RagamuffinsCheesecakeCo" target="_blank"><img border="0" height="22" src="images/facebook_logo.png" width="22" /></a> <a href="http://www.flickr.com/photos/99856394@N06/" target="_blank"><img border="0" height="22" src="images/flickrlink.png" width="22" /></a> <a href="http://ragamuffinsbakingco.blogspot.com/" target="_blank"><img border="0" height="22" src="images/blogger_logo.png" width="22" /></a></div>
+
+<div style="position: absolute; left: 256px; width: 440px; top: 1px; height: 410px; overflow-y: scroll; background-color:#dabfa2; padding: 7px">
+<p align="center"><span style="color: #000; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;"><b>Ragamuffin&rsquo;s Baking Co: *Sample Menu </b><br />
+*Please download a current PDF menu <a href="images/ragamuffin_menu.pdf" target="_blank">HERE</a></span><br />
+&nbsp;</p>
+
+<p><span style="color: #000; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">Cheesecakes:<br />
+<br />
+Please provide at least 48 hour notice. Custom orders available upon request.<br />
+<br />
+6&rdquo; 8&rdquo; 10&rdquo;<br />
+<br />
+Ragamuffin&rsquo;s Cheesecake: Slightly citrusy cheesecake with graham cracker crust, our version of the NY style<br />
+25/30/42<br />
+<br />
+Simple Chocolate: Chocolate Graham Cracker Crust, Chocolate Cheesecake<br />
+25/30/42<br />
+<br />
+Lovely Lemon: Lemon Shortbread Crust, Lemon Cheesecake, Lemon Sour Cream Topping<br />
+25/30/42<br />
+<br />
+Death by Chocolate: Chocolate Graham Cracker Crust, Ganache, Chocolate Cheesecake, Ganache on top<br />
+28/33/45<br />
+<br />
+Peanut Butter Cup Cheesecake: Chocolate Cookie Crust, Ganache, Peanut Butter Cups, Peanut Butter Cake, Chocolate Ganache, Chopped Peanut Butter Cups<br />
+32/38/50<br />
+<br />
+Lemon Blueberry: Graham Cracker Crust, Lemon Cake, Blueberry Sauce on Top<br />
+25/30/42<br />
+<br />
+Vanilla Bean: Graham Cracker Crust, Vanilla Bean Cake, toasted Graham crumbs on the exterior<br />
+25/30/42<br />
+<br />
+Mocha Latte: Chocolate Crust, Chocolate Ganache, Espresso Cheesecake filling<br />
+25/30/42<br />
+<br />
+CarMellow: Vanilla Bean Cheesecake, Graham Cracker Crust, Real Caramel Sauce.<br />
+25/30/42<br />
+<br />
+Pop&rsquo;s Cheesecake: Citrus Nut Shortbread Crust, Ricotta, Citrus Cheesecake, Raspberry Sauce on the side.<br />
+32/38/50<br />
+<br />
+Red Velvet Cheesecake: Red Velvet Cake Bottom, Ragamuffin&#39;s Cheesecake layered with chunks of Red Velvet Cake. Toasted cake crumbs around the Exterior.<br />
+25/30/42<br />
+<br />
+Add a sauce to any cheesecake:<br />
+Raspberry 1 Blueberry 1 Strawberry (fresh when in season) 1 Ganache 5<br />
+<br />
+Cookies:<br />
+<br />
+Chocolate Chip-Classic Chocolate Chip Cookie 18<br />
+<br />
+Iced Oatmeal- Oats and Cinnamon with a light glaze 18<br />
+<br />
+Peanut Butter Honey- Natural Peanut Butter, sweetened with honey and brown sugar 20<br />
+<br />
+Peanut Butter Sandwich- Two Peanut Butter Honey Cookies with Peanut Butter frosting in between 21<br />
+<br />
+Chocolate Chocolate Chip- Dark Chocolate cookie with Dark Chocolate Chocolate Chips 18<br />
+<br />
+Cocoa Cookies- Dark Chocolate Cocoa, rolled in Sugar 16<br />
+<br />
+Espresso Chip- Chocolate Chip Cookie infused with Espresso 18<br />
+<br />
+Snickerdoodles: Cream Cheese Sugar Cookie Rolled in Cinnamon Sugar $18<br />
+<br />
+Rolled Sugar- Classic rolled and cut sugar cookie 16<br />
+<br />
+12 Brownies- Fudgey, Chewy, Dark Chocolate Brownies, with or without Chocolate Chips 20<br />
+Add nuts- 1<br />
+<br />
+12 Frosted Brownies<br />
+[Ganache, Peanut Butter, Cake Frosting]: 24<br />
+<br />
+The Widow Maker- Brownie bottom, Caramel, Cookie Dough, Ganache, Peanut Butter Frosting-30 **<br />
+<br />
+**The Widow Maker must be ordered in a minimum quantity of 24 and increased by the dozen. The given price is based on 24 1.25&quot; squares.</span></p>
+</div>
+
+<div style="position: absolute; height: 350px; width: 200px; left: 732px; top: 2px;">
+<p><!-- start feedwind code --><script type="text/javascript">
+<!--
+rssmikle_url="http://ragamuffinsbakingco.blogspot.com/feeds/posts/default";
+rssmikle_frame_width="190";
+rssmikle_frame_height="380";
+rssmikle_target="_blank";
+rssmikle_font="Verdana, Arial, sans-serif";
+rssmikle_font_size="10";
+rssmikle_border="off";
+rssmikle_css_url="";
+rssmikle_title="on";
+rssmikle_title_bgcolor="#484241";
+rssmikle_title_color="#FFFFFF";
+rssmikle_title_bgimage="http://";
+rssmikle_item_bgcolor="#FFFFFF";
+rssmikle_item_bgimage="http://";
+rssmikle_item_title_length="55";
+rssmikle_item_title_color="#666666";
+rssmikle_item_border_bottom="on";
+rssmikle_item_description="on";
+rssmikle_item_description_length="40";
+rssmikle_item_description_color="#666666";
+rssmikle_item_date="off";
+rssmikle_item_description_tag="off";
+rssmikle_item_podcast="icon";
+//-->
+</script><script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script></p>
+
+<div style="font-size:10px; text-align:right;"><a href="http://feed.mikle.com/en/" style="color:#CCCCCC;" target="_blank">Feed Widget</a> <!--Please display the above link in your web page according to Terms of Service.--></div>
+<!-- end feedwind code -->
+
+<div style="position: absolute; left: -487px; height: 181px; top: 423px; width:672px; padding: 0px;">
+<div id="container">
+<p>&nbsp;</p>
+
+<ul class="thumbs" id="cbox">
+</ul>
+<br />
+&nbsp;</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
